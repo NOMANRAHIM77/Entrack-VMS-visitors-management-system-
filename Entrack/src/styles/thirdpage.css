@@ -8,6 +8,7 @@
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* outer viewport that clips the moving track */
