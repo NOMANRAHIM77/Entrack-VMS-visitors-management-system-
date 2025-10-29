@@ -5,6 +5,10 @@ import Layout from './layout/Layout'
 import appRoutes from './routes/appRoutes'
 import softwareCategoriesRoutes from './routes/softwareCategoriesRoutes'
 import SoftwareCategories from './pages/SoftwareCategories'
+import Login from './Authentication/Login'
+import SignUp from './Authentication/SignUp'
+import PrivateRoute from './routes/PrivateRoute'
+import { AuthProvider } from './contextsFiles/AuthContext'
 
 
 // react router
@@ -15,12 +19,25 @@ import {
   Link,
 } from "react-router-dom";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
     element:(<Layout>
       <FrontPage/>
     </Layout>)
+  },
+  {
+       path: "/signup",
+    element:(
+      <SignUp/>
+   )
+  },
+   {
+       path: "/login",
+    element:(
+      <Login/>
+   )
   },
 
   ...appRoutes.map((currRoute)=>({
@@ -51,7 +68,10 @@ function App() {
 
   return (
     <>
-    <RouterProvider router={router} />     
+    <AuthProvider>
+       <RouterProvider router={router} />  
+    </AuthProvider>
+   
     </>
   )
 }
