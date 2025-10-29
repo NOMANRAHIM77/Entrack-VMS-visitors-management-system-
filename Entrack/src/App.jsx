@@ -35,9 +35,11 @@ const router = createBrowserRouter([
   ...softwareCategoriesRoutes.map((currRoute)=>({
 path:currRoute.route,
 element : (
-  <Layout>
+<PrivateRoute>
+    <Layout>
     {currRoute.component}
     </Layout>
+</PrivateRoute>
 )
   }))
 ]);
