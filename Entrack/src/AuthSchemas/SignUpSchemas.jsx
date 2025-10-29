@@ -1,6 +1,6 @@
-import {z} from zodResolver
+import {z} from "zod"
 
-export const SignUpSchemas=z.object({
+ const SignUpSchemas=z.object({
     firstname : z.string().nonempty("firstname is required").min(3, "At least 3 characters"),
     surname:z.string(),
     email: z.string().min(1, "Email is required").email("Enter a valid email"),
@@ -13,3 +13,4 @@ export const SignUpSchemas=z.object({
     .regex(/[0-9]/, "Password must contain at least one number")
     .regex(/[@$!%*?&]/, "Password must contain at least one special character (@$!%*?&#)"),
 })
+export default SignUpSchemas
