@@ -1,7 +1,16 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+
 
 const SoftwareCategories = () => {
+  
+  const navigate = useNavigate();
+
+  const handleModuleClick = (moduleName) => {
+    // Go to login with module info
+    navigate("/login", { state: { module: moduleName } });
+  };
+
 
 const categories = [
   {
@@ -15,6 +24,7 @@ const categories = [
       "Notify staff about visitors",
     ],
      path: "/hospital",
+     module:"hospital"
   },
   {
     title: "University / Educational Institutions",
@@ -27,6 +37,7 @@ const categories = [
       "Monitor visiting hours",
     ],
      path: "/education",
+     module:"education"
   },
   {
     title: "Gym / Fitness Centers",
@@ -39,6 +50,7 @@ const categories = [
       "Automated check-in/out",
     ],
      path: "/fitness",
+     module:"fitness"
   },
   {
     title: "Corporate Offices",
@@ -51,6 +63,7 @@ const categories = [
       "Notify employees instantly on visitor arrival",
     ],
     path: "/office",
+    module:"office"
   },
   {
     title: "Government Buildings",
@@ -63,6 +76,7 @@ const categories = [
       "Department-wise visit authorization",
     ],
     path: "/goverment",
+    module:"goverment"
   },
   {
     title: "Hotels & Resorts",
@@ -75,6 +89,7 @@ const categories = [
       "Integration with hotel management systems",
     ],
     path: "/hotel",
+    module:"hotel"
   },
   {
     title: "Factories / Industrial Plants",
@@ -87,6 +102,7 @@ const categories = [
       "Access badge printing",
     ],
     path: "/factory",
+    module:"factory"
   },
   {
     title: "IT Parks & Research Centers",
@@ -99,6 +115,7 @@ const categories = [
       "Custom reports and analytics",
     ],
     path: "/itcenters",
+    module:"itcenters"
   },
   {
     title: "Event Venues & Exhibition Halls",
@@ -111,6 +128,7 @@ const categories = [
       "Real-time crowd tracking",
     ],
     path: "/eventhalls",
+    module:"eventhalls"
   },
 ];
 
@@ -129,7 +147,9 @@ const categories = [
 <div  className='w-full  text-white flex flex-col gap-20 items-center '>
   {categories.map((currCategory)=>{
     return     (
-      <Link to={currCategory.path} className=' bg-black w-[95%] h-70 flex  hover:bg-amber-500 transition-all duration-1000 ease-in-out flex-col gap-5 p-3 hover:scale-105 cursor-pointer rounded-4xl'>
+      <Link     onClick={() => handleModuleClick(currCategory.module)}   to={currCategory.path} className=' bg-black w-[95%] h-70 flex  hover:bg-amber-500 transition-all duration-1000 ease-in-out flex-col gap-5 p-3 hover:scale-105 cursor-pointer rounded-4xl'>
+         
+      
       <div   >
 
          <div  className='flex flex-row gap-6' >

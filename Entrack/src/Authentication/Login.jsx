@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import  app  from "../firebase"; // ✅ import initialized firebase app
 import { Link, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const auth = getAuth(app);
 
@@ -17,6 +18,9 @@ const LoginSchema = z.object({
 const Login = () => {
   const navigate = useNavigate();
 
+const location = useLocation();
+  const moduleName = location.state?.module;
+
   const {
     register,
     handleSubmit,
@@ -26,32 +30,24 @@ const Login = () => {
     resolver: zodResolver(LoginSchema),
   });
 
-  const onSubmit = async (data) => {
-    try {
-      // 🔐 Login user with Firebase
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
+ const onSubmit = async (data) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password);
+    console.log("✅ Login success:", userCredential.user);
+    navigate(moduleName ? `/${moduleName}` : "/");
+    reset();
+  } catch (error) {
+    console.error("❌ Login error:", error.message);
+    setLoginError("Invalid email or password."); // show inside UI
+  }
+};
 
-      console.log("✅ Login success:", userCredential.user);
-      alert("✅ Login successful!");
-
-      // redirect to hospital dashboard/module
-      navigate("/hospital");
-      reset();
-    } catch (error) {
-      console.error("❌ Login error:", error.message);
-      alert("Invalid email or password. Please try again.");
-    }
-  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-amber-100 p-6">
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-8">
         <h1 className="text-3xl font-extrabold text-blue-700 text-center mb-2">
-          Hospital VMS
+           VMS
         </h1>
         <h2 className="text-xl font-semibold text-gray-600 text-center mb-6">
           Login
