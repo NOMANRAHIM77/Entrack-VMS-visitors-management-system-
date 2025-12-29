@@ -12,13 +12,11 @@ import { AuthProvider } from './contextsFiles/AuthContext'
 import SoftwareCategoriesLayout from './layout/SoftwareCategoriesLayout'
 
 // react router
-
 import {
   createBrowserRouter,
   RouterProvider,
   Link,
 } from "react-router-dom";
-
 
 const router = createBrowserRouter([
   {

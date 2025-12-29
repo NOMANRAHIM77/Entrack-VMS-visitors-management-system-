@@ -1,14 +1,28 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../contextsFiles/AuthContext"; // adjust path
+import { Navigate, useLocation } from "react-router-dom";
+import { useAuth } from "../contextsFiles/AuthContext";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+  const location = useLocation();
 
-  if (!user) {
-    return <Navigate to="/signup" replace />;
+  // Optional: show loader while auth is resolving
+  if (loading) {
+    return null; // or spinner
   }
 
+  // 🚫 Not logged in → send to login & remember path
+  if (!user) {
+    return (
+      <Navigate
+        to="/login"
+        replace
+        state={{ from: location }} // 🔥 THIS is the key
+      />
+    );
+  }
+
+  // ✅ Logged in → allow access
   return children;
 };
 
