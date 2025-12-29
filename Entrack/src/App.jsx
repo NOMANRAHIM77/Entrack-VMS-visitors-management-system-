@@ -9,7 +9,7 @@ import Login from './Authentication/Login'
 import SignUp from './Authentication/SignUp'
 import PrivateRoute from './routes/PrivateRoute'
 import { AuthProvider } from './contextsFiles/AuthContext'
-
+import SoftwareCategoriesLayout from './layout/SoftwareCategoriesLayout'
 
 // react router
 
@@ -53,9 +53,9 @@ const router = createBrowserRouter([
 path:currRoute.route,
 element : (
 <PrivateRoute>
-    <Layout>
+    <SoftwareCategoriesLayout>
     {currRoute.component}
-    </Layout>
+    </SoftwareCategoriesLayout>
 </PrivateRoute>
 )
   }))

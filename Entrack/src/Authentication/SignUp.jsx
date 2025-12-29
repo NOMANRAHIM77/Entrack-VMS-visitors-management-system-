@@ -54,6 +54,7 @@ const SignUp = () => {
 
       alert("✅ Account created successfully!");
       reset(); // clear the form
+      
     } catch (error) {
       console.error("❌ Signup Error:", error.message);
       alert(error.message);
@@ -66,7 +67,7 @@ const SignUp = () => {
    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-amber-100 p-6">
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-8">
         <h1 className="text-3xl font-extrabold text-blue-700 text-center mb-2">
-          Hospital VMS
+           VMS
         </h1>
         <h2 className="text-xl font-semibold text-gray-600 text-center mb-6">
           Sign Up
