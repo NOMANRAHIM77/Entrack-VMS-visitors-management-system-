@@ -6,10 +6,9 @@ const SoftwareCategories = () => {
   
   const navigate = useNavigate();
 
-  const handleModuleClick = (moduleName) => {
-    // Go to login with module info
-    navigate("/login", { state: { module: moduleName } });
-  };
+const handleModuleClick = (path) => {
+  navigate(path);
+};
 
 
 const categories = [
@@ -147,7 +146,7 @@ const categories = [
 <div  className='w-full  text-white flex flex-col gap-20 items-center '>
   {categories.map((currCategory)=>{
     return     (
-      <Link     onClick={() => handleModuleClick(currCategory.module)}   to={currCategory.path} className=' bg-black w-[95%] h-70 flex  hover:bg-amber-500 transition-all duration-1000 ease-in-out flex-col gap-5 p-3 hover:scale-105 cursor-pointer rounded-4xl'>
+      <Link     onClick={() => handleModuleClick(currCategory.path)}   to={currCategory.path} className=' bg-black w-[95%] h-70 flex  hover:bg-amber-500 transition-all duration-1000 ease-in-out flex-col gap-5 p-3 hover:scale-105 cursor-pointer rounded-4xl'>
          
       
       <div   >
