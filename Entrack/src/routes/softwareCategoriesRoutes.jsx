@@ -5,7 +5,7 @@ import Factory from "../softwareCategoriesComponents/factory/Factory"
 import Fitness from "../softwareCategoriesComponents/fitness/Fitness"
 import Goverment from "../softwareCategoriesComponents/government/Goverment"
 import Hotel from "../softwareCategoriesComponents/hotel/Hotel"
-import ItCenters from "../softwareCategoriesComponents/itcenters/ItCenters"
+import ItCenters from "../softwareCategoriesComponents/itcenter/ItCenters"
 import Office from "../softwareCategoriesComponents/office/Office"
 
 
