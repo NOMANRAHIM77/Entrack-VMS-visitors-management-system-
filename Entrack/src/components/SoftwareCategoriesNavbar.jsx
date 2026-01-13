@@ -24,28 +24,7 @@ const SoftwareCategoriesNavbar = () => {
           MyCompany
         </h1>
 
-        <div className="flex gap-6">
-          <Link
-            to="/dashboard"
-            className="text-gray-300 hover:text-white transition"
-          >
-            Dashboard
-          </Link>
-
-          <Link
-            to="/visitors"
-            className="text-gray-300 hover:text-white transition"
-          >
-            Manage Visitors
-          </Link>
-
-          <Link
-            to="/analytics"
-            className="text-gray-300 hover:text-white transition"
-          >
-            Analytics
-          </Link>
-        </div>
+       
       </div>
 
       {/* Right section */}

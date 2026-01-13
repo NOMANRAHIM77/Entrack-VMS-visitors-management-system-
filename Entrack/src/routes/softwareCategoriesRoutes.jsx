@@ -1,4 +1,4 @@
-import Hospital from "../softwareCategoriesComponents/hospital"
+import Hospital from "../softwareCategoriesComponents/hospital/Hospital"
 import Education from "../softwareCategoriesComponents/Education"
 import EventHalls from "../softwareCategoriesComponents/EventHalls"
 import Factory from "../softwareCategoriesComponents/Factory"
