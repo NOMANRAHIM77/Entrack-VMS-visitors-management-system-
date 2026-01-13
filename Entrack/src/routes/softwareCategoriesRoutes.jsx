@@ -1,12 +1,12 @@
 import Hospital from "../softwareCategoriesComponents/hospital/Hospital"
-import Education from "../softwareCategoriesComponents/Education"
-import EventHalls from "../softwareCategoriesComponents/EventHalls"
-import Factory from "../softwareCategoriesComponents/Factory"
-import Fitness from "../softwareCategoriesComponents/Fitness"
-import Goverment from "../softwareCategoriesComponents/Goverment"
-import Hotel from "../softwareCategoriesComponents/Hotel"
-import ItCenters from "../softwareCategoriesComponents/ItCenters"
-import Office from "../softwareCategoriesComponents/Office"
+import Education from "../softwareCategoriesComponents/education/Education"
+import EventHalls from "../softwareCategoriesComponents/eventhalls/EventHalls"
+import Factory from "../softwareCategoriesComponents/factory/Factory"
+import Fitness from "../softwareCategoriesComponents/fitness/Fitness"
+import Goverment from "../softwareCategoriesComponents/government/Goverment"
+import Hotel from "../softwareCategoriesComponents/hotel/Hotel"
+import ItCenters from "../softwareCategoriesComponents/itcenters/ItCenters"
+import Office from "../softwareCategoriesComponents/office/Office"
 
 
 const softwareCategoriesRoutes=[
