@@ -28,7 +28,7 @@ const Education = () => {
           </h2>
 
           <div className="bg-white px-4 py-2 rounded-xl shadow text-sm">
-            Academic Year 2025
+            Academic Year 2026
           </div>
         </div>
 
