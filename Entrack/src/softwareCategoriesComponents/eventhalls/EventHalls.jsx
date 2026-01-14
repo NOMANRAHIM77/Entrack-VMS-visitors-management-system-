@@ -1,9 +1,92 @@
-import React from 'react'
+import React from "react";
 
 const EventHalls = () => {
   return (
-    <div>EventHalls</div>
-  )
-}
+    <div className="min-h-screen bg-gray-100 flex">
+      
+      {/* Sidebar */}
+      <aside className="w-64 bg-amber-900 text-white flex flex-col p-6">
+        <h1 className="text-2xl font-bold mb-10">Event Admin</h1>
 
-export default EventHalls
+        <nav className="flex flex-col gap-4 text-amber-200">
+          <button className="text-left hover:text-white">Dashboard</button>
+          <button className="text-left hover:text-white">Halls</button>
+          <button className="text-left hover:text-white">Bookings</button>
+          <button className="text-left hover:text-white">Clients</button>
+          <button className="text-left hover:text-white">Payments</button>
+          <button className="text-left hover:text-white">Reports</button>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 p-8">
+        
+        {/* Header */}
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            Event Halls Dashboard
+          </h2>
+
+          <div className="bg-white px-4 py-2 rounded-xl shadow text-sm">
+            Current Month Overview
+          </div>
+        </div>
+
+        {/* KPI Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+          
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <p className="text-gray-500 text-sm">Total Event Halls</p>
+            <h3 className="text-4xl font-bold mt-2">0</h3>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <p className="text-gray-500 text-sm">Upcoming Events</p>
+            <h3 className="text-4xl font-bold mt-2 text-blue-600">0</h3>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <p className="text-gray-500 text-sm">Booked Events</p>
+            <h3 className="text-4xl font-bold mt-2 text-green-600">0</h3>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <p className="text-gray-500 text-sm">Monthly Revenue</p>
+            <h3 className="text-4xl font-bold mt-2 text-amber-600">
+              $0
+            </h3>
+          </div>
+
+        </div>
+
+        {/* Lower Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          {/* Booking Schedule */}
+          <div className="bg-white rounded-2xl shadow p-6">
+            <h4 className="text-lg font-semibold mb-4">
+              Upcoming Bookings
+            </h4>
+            <p className="text-gray-500 text-sm">
+              Scheduled events and bookings will appear here.
+            </p>
+          </div>
+
+          {/* Hall Utilization */}
+          <div className="bg-white rounded-2xl shadow p-6">
+            <h4 className="text-lg font-semibold mb-4">
+              Hall Utilization Summary
+            </h4>
+            <p className="text-gray-500 text-sm">
+              Hall usage analytics and availability details will be displayed here.
+            </p>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+  );
+};
+
+export default EventHalls;
