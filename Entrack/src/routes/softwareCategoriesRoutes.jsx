@@ -1,5 +1,5 @@
 import Hospital from "../softwareCategoriesComponents/hospital/Hospital"
-import Education from "../softwareCategoriesComponents/education/Education"
+import EducationDashboard from "../softwareCategoriesComponents/education/EducationDashboard"
 import EventHalls from "../softwareCategoriesComponents/eventhalls/EventHalls"
 import Factory from "../softwareCategoriesComponents/factory/Factory"
 import Fitness from "../softwareCategoriesComponents/fitness/Fitness"
@@ -16,7 +16,7 @@ const softwareCategoriesRoutes=[
     },
      {
       route:"/education",
-      component:<Education/>
+      component:<EducationDashboard/>
     },
       {
       route:"/eventhalls",
