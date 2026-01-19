@@ -1,5 +1,3 @@
-import React from "react";
-
 const Faculty = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
