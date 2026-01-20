@@ -1,7 +1,7 @@
 // HospitalLayout.jsx
 import { NavLink, Outlet } from "react-router-dom";
 
-const HospitalLayout = () => {
+const HospitalLayout = ({children}) => {
   return (
     <div className="min-h-screen bg-gray-100 flex">
       
@@ -30,7 +30,7 @@ const HospitalLayout = () => {
 
       {/* Dynamic Content */}
       <main className="flex-1 p-8">
-        <Outlet />
+       {children}
       </main>
     </div>
   );

@@ -6,16 +6,14 @@ import Patients from "./Patients";
 import Reports from "./Reports";
 import Settings from "./Settings";
 
-const HospitalRoutes = {
-  path: "/hospital",
-  element: <HospitalLayout />,
-  children: [
-    { index: true, element: <HospitalDashboard /> }, // default page
-    { path: "visitors", element: <Visitors /> },
-    { path: "patients", element: <Patients /> },
-    { path: "reports", element: <Reports /> },
-    { path: "settings", element: <Settings /> },
-  ],
-};
+const HospitalRoutes = [
+
+    { route: "/visitors", component: <Visitors /> },
+    { route: "/patients", component: <Patients /> },
+    { route: "/reports", component: <Reports /> },
+    { route: "/settings", component: <Settings /> },
+  
+];
+
 
 export default HospitalRoutes;
