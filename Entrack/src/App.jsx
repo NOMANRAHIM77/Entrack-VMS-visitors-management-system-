@@ -12,8 +12,10 @@ import Login from './Authentication/Login'
 import SignUp from './Authentication/SignUp'
 import PrivateRoute from './routes/PrivateRoute'
 import { AuthProvider } from './contextsFiles/AuthContext'
+
 import SoftwareCategoriesLayout from './layout/SoftwareCategoriesLayout'
 import EducationLayout from './softwareCategoriesComponents/education/EducationLayout'
+import HospitalLayout from './softwareCategoriesComponents/hospital/HospitalLayout'
 
 
 // react router
@@ -77,9 +79,9 @@ element : (
     ...HospitalRoutes.map((currRoute)=>({
 path:currRoute.route,
 element : (
-<PrivateRoute>
+  <HospitalLayout>
     {currRoute.component}
-</PrivateRoute>
+    </HospitalLayout>
 )
   }))
 
