@@ -8,10 +8,10 @@ import Settings from "./Settings";
 
 const HospitalRoutes = [
 
-    { route: "/visitors", component: <Visitors /> },
-    { route: "/patients", component: <Patients /> },
-    { route: "/reports", component: <Reports /> },
-    { route: "/settings", component: <Settings /> },
+    { route: "hospital/visitors", component: <Visitors /> },
+    { route: "hospital/patients", component: <Patients /> },
+    { route: "hospital/reports", component: <Reports /> },
+    { route: "hospital/settings", component: <Settings /> },
   
 ];
 
