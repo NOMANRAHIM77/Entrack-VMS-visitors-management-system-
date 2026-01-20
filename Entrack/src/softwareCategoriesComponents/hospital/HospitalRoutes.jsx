@@ -1,6 +1,6 @@
 // HospitalRoutes.jsx
 import HospitalLayout from "./HospitalLayout";
-import Dashboard from "./Dashboard";
+import HospitalDashboard from "./HospitalDashboard";
 import Visitors from "./Visitors";
 import Patients from "./Patients";
 import Reports from "./Reports";
@@ -10,7 +10,7 @@ const HospitalRoutes = {
   path: "/hospital",
   element: <HospitalLayout />,
   children: [
-    { index: true, element: <Dashboard /> }, // default page
+    { index: true, element: <HospitalDashboard /> }, // default page
     { path: "visitors", element: <Visitors /> },
     { path: "patients", element: <Patients /> },
     { path: "reports", element: <Reports /> },

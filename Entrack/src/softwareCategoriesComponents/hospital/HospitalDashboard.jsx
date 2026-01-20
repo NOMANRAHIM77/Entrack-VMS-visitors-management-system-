@@ -1,5 +1,5 @@
-// Dashboard.jsx
-const Dashboard = () => {
+// HospitalDashboard.jsx
+const HospitalDashboard = () => {
   return (
     <>
       <div className="flex justify-between items-center mb-8">
@@ -31,4 +31,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default HospitalDashboard;
