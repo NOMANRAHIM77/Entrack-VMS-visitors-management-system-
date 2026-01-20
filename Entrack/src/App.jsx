@@ -5,6 +5,8 @@ import Layout from './layout/Layout'
 import appRoutes from './routes/appRoutes'
 import softwareCategoriesRoutes from './routes/softwareCategoriesRoutes'
 import EducationRoutes from './softwareCategoriesComponents/education/EducationRoutes'
+import HospitalRoutes from './softwareCategoriesComponents/hospital/HospitalRoutes'
+
 import SoftwareCategories from './pages/SoftwareCategories'
 import Login from './Authentication/Login'
 import SignUp from './Authentication/SignUp'
@@ -68,6 +70,15 @@ element : (
     <EducationLayout>
     {currRoute.component}
     </EducationLayout>
+</PrivateRoute>
+)
+  })),
+
+    ...HospitalRoutes.map((currRoute)=>({
+path:currRoute.route,
+element : (
+<PrivateRoute>
+    {currRoute.component}
 </PrivateRoute>
 )
   }))
