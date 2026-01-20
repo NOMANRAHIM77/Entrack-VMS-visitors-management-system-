@@ -1,4 +1,4 @@
-import Hospital from "../softwareCategoriesComponents/hospital/Hospital"
+import HospitalDashboard from "../softwareCategoriesComponents/hospital/HospitalDashboard"
 import EducationDashboard from "../softwareCategoriesComponents/education/EducationDashboard"
 import EventHalls from "../softwareCategoriesComponents/eventhalls/EventHalls"
 import Factory from "../softwareCategoriesComponents/factory/Factory"
@@ -12,7 +12,7 @@ import Office from "../softwareCategoriesComponents/office/Office"
 const softwareCategoriesRoutes=[
     {
       route:"/hospital",
-      component:<Hospital/>
+      component:<HospitalDashboard/>
     },
      {
       route:"/education",
