@@ -1,33 +1,61 @@
 // HospitalDashboard.jsx
+import { Link } from "react-router-dom";
+
 const HospitalDashboard = () => {
   return (
-    <>
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-semibold text-gray-800">
-          Dashboard Overview
-        </h2>
-        <div className="bg-white px-4 py-2 rounded-xl shadow text-sm">
-          Admin Panel
-        </div>
-      </div>
+    <div className="min-h-screen flex bg-gray-100">
+      
+      {/* Left Sidebar */}
+      <aside className="w-64 bg-slate-900 text-white p-6">
+        <h2 className="text-xl font-bold mb-8">Hospital Dashboard</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div className="bg-white p-6 rounded-2xl shadow">
-          <p className="text-gray-500 text-sm">Total Visitors</p>
-          <h3 className="text-4xl font-bold mt-2">0</h3>
-        </div>
+        <nav className="flex flex-col gap-4 text-gray-300">
+          <Link
+            to="/hospital/patients"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            Patients
+          </Link>
 
-        <div className="bg-white p-6 rounded-2xl shadow">
-          <p className="text-gray-500 text-sm">Visitors Inside</p>
-          <h3 className="text-4xl font-bold mt-2 text-green-600">0</h3>
-        </div>
+          <Link
+            to="/hospital/visitors"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            Visitors
+          </Link>
 
-        <div className="bg-white p-6 rounded-2xl shadow">
-          <p className="text-gray-500 text-sm">Checked Out</p>
-          <h3 className="text-4xl font-bold mt-2 text-red-500">0</h3>
-        </div>
-      </div>
-    </>
+          <Link
+            to="/hospital/reports"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            Reports
+          </Link>
+
+          <Link
+            to="/hospital/settings"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            Settings
+          </Link>
+        </nav>
+      </aside>
+    </div>
   );
 };
 
