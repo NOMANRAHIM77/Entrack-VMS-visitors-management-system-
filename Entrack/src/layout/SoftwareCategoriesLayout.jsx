@@ -4,7 +4,7 @@ import SoftwareCategoriesNavbar from '../components/SoftwareCategoriesNavbar'
 const SoftwareCategoriesLayout = ({children}) => {
   return (
     <>
-    <SoftwareCategoriesNavbar/>
+    {/* <SoftwareCategoriesNavbar/> */}
     {children}
     </>
   )
