@@ -149,7 +149,7 @@ const categories = [
       <Link     onClick={() => handleModuleClick(currCategory.path)}   to={currCategory.path} className=' bg-black w-[95%] h-70 flex  hover:bg-red-400 transition-all duration-1000 ease-in-out flex-col gap-5 p-3 hover:scale-105 cursor-pointer rounded-4xl'>
          
       
-      <div   >
+      <div>
 
          <div  className='flex flex-row gap-6' >
           <div  className='flex flex-col gap-8 text-3xl ' ><h1>{currCategory.title}</h1>
