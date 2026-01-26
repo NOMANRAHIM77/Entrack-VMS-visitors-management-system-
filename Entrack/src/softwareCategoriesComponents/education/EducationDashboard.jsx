@@ -1,31 +1,62 @@
+import { Link } from "react-router-dom";
 const EducationDashboard = () => {
   return (
     <>
-      <h2 className="text-3xl font-semibold mb-6">
-        Education Dashboard
-      </h2>
+     <nav className="flex flex-col gap-4 text-gray-300">
+          <Link
+            to="/education/courses"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            courses
+          </Link>
 
-      <div className="grid grid-cols-4 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p>Total Students</p>
-          <h3 className="text-3xl font-bold">0</h3>
-        </div>
+          <Link
+            to="/education/faculty"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            faculty
+          </Link>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p>Courses</p>
-          <h3 className="text-3xl font-bold">0</h3>
-        </div>
+          <Link
+            to="/education/results"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            results
+          </Link>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p>Faculty</p>
-          <h3 className="text-3xl font-bold">0</h3>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p>Pass %</p>
-          <h3 className="text-3xl font-bold">0%</h3>
-        </div>
-      </div>
+          <Link
+            to="/education/settings"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            Settings
+          </Link>
+           <Link
+            to="/education/students"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-semibold"
+                : "hover:text-white"
+            }
+          >
+            students
+          </Link>
+        </nav>
     </>
   );
 };
