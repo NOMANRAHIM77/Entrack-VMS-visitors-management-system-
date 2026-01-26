@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 const EducationDashboard = () => {
   return (
     <>
+     <div className="min-h-screen flex bg-gray-100">
+      
+      {/* Left Sidebar */}
+      <aside className="w-64 bg-slate-900 text-white p-6">
+        <h2 className="text-xl font-bold mb-8">Education Dashboard</h2>
      <nav className="flex flex-col gap-4 text-gray-300">
           <Link
             to="/education/courses"
@@ -57,6 +62,8 @@ const EducationDashboard = () => {
             students
           </Link>
         </nav>
+        </aside>
+    </div>
     </>
   );
 };
