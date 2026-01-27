@@ -10,6 +10,9 @@ const EducationDashboard = () => {
         <h2 className="text-xl font-bold mb-8">Education Dashboard</h2>
 
         <nav className="flex flex-col gap-4 text-gray-300">
+          <Link to="/education/analytics" className="hover:text-white">
+           analytics
+          </Link>
           <Link to="/education/courses" className="hover:text-white">
             Courses
           </Link>
@@ -31,7 +34,7 @@ const EducationDashboard = () => {
       {/* Right Content Area */}
       <main className="flex-1 p-8">
         
-        <Analytics/>
+        
 
       </main>
     </div>
