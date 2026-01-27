@@ -5,6 +5,7 @@ import Courses from "./Courses";
 import Faculty from "./Faculty";
 import Results from "./Results";
 import Settings from "./Settings";
+import Analytics from "./Analytics";
 
 const EducationRoutes = [
   {
@@ -34,6 +35,10 @@ const EducationRoutes = [
   {
     route: "/education/settings",
     component: <Settings />,
+  },
+  {
+    route: "/education/analytics",
+    component: <Analytics/>,
   },
 ];
 
