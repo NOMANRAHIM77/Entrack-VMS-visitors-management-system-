@@ -5,11 +5,12 @@ import Workers from "./Workers";
 import Production from "./Production";
 import Reports from "./Reports";
 import Settings from "./Settings";
+import Analytics from "./Analytics";
 
 const FactoryRoutes = [
    {
     route: "/factory",
-    component: <Factory />,
+    component: <FactoryDashboard />,
   },
   {
     route: "/factory/dashboard",
@@ -30,6 +31,14 @@ const FactoryRoutes = [
   {
     route: "/factory/workers",
     component: <Workers />,
+  },
+   {
+    route: "/factory/settings",
+    component: <Settings />,
+  },
+   {
+    route: "/factory/analytics",
+    component: <Analytics/>,
   },
 ];
 
