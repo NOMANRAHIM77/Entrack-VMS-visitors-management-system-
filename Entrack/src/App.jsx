@@ -6,6 +6,7 @@ import appRoutes from './routes/appRoutes'
 import softwareCategoriesRoutes from './routes/softwareCategoriesRoutes'
 import EducationRoutes from './softwareCategoriesComponents/education/EducationRoutes'
 import HospitalRoutes from './softwareCategoriesComponents/hospital/HospitalRoutes'
+import FactoryRoutes from './softwareCategoriesComponents/factory/FactoryRoutes'
 
 import SoftwareCategories from './pages/SoftwareCategories'
 import Login from './Authentication/Login'
@@ -16,6 +17,7 @@ import { AuthProvider } from './contextsFiles/AuthContext'
 import SoftwareCategoriesLayout from './layout/SoftwareCategoriesLayout'
 import EducationLayout from './softwareCategoriesComponents/education/EducationLayout'
 import HospitalLayout from './softwareCategoriesComponents/hospital/HospitalLayout'
+import FactoryLayout from './softwareCategoriesComponents/factory/FactoryLayout'
 
 
 // react router
@@ -82,6 +84,16 @@ element : (
   <HospitalLayout>
     {currRoute.component}
     </HospitalLayout>
+)
+  })),
+
+
+    ...FactoryRoutes.map((currRoute)=>({
+path:currRoute.route,
+element : (
+  <FactoryLayout>
+    {currRoute.component}
+    </FactoryLayout>
 )
   }))
 
