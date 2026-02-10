@@ -8,36 +8,28 @@ import Settings from "./Settings";
 
 const FactoryRoutes = [
    {
-    route: "/education",
-    component: <Education />,
+    route: "/factory",
+    component: <Factory />,
   },
   {
-    route: "/education/dashboard",
-    component: <EducationDashboard />,
+    route: "/factory/dashboard",
+    component: <FactoryDashboard />,
   },
   {
-    route: "/education/students",
-    component: <Students />,
+    route: "/factory/machines",
+    component: <Machines />,
   },
   {
-    route: "/education/courses",
-    component: <Courses />,
+    route: "/factory/production",
+    component: <Production />,
   },
   {
-    route: "/education/faculty",
-    component: <Faculty />,
+    route: "/factory/reports",
+    component: <Reports />,
   },
   {
-    route: "/education/results",
-    component: <Results />,
-  },
-  {
-    route: "/education/settings",
-    component: <Settings />,
-  },
-  {
-    route: "/education/analytics",
-    component: <Analytics/>,
+    route: "/factory/workers",
+    component: <Workers />,
   },
 ];
 
